@@ -37,7 +37,7 @@ angular
 
             $mdThemingProvider
                 .theme('default')
-                .primaryPalette('black', {
+                .primaryPalette('grey', {
                     'default': '700'
                 });
 
