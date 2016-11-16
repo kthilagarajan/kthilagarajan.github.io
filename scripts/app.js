@@ -48,7 +48,7 @@ angular
             $stateProvider.state({
                 name: 'common',
                 abstract: true,
-                templateUrl: 'views/_common.html',
+                templateUrl: 'views/common.html',
                 controller: 'CommonCtrl'
             });
 
