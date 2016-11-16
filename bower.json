@@ -1,0 +1,22 @@
+{
+  "name": "kthilagarajan.github.io",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Thilagarajan Kamarajan"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-material-sidenav": "^0.0.14",
+    "components-font-awesome": "^4.7.0"
+  }
+}
