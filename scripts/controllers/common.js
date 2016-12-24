@@ -33,8 +33,8 @@ angular.module('demoApp')
             $scope.menu = ssSideNav;
 
             // Listen event SS_SIDENAV_CLICK_ITEM to close menu
-            $rootScope.$on('SS_SIDENAV_CLICK_ITEM', function() {
-                console.log('do whatever you want after click on item');
+            $rootScope.$on('SS_SIDENAV_CLICK_ITEM', function($scope) {
+                console.log($scope);
             });
 
             // _perform_change_for_demo();
