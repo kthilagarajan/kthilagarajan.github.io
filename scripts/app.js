@@ -34,10 +34,10 @@ angular
             $urlRouterProvider,
             $stateProvider,
             ssSideNavSectionsProvider) {
-
+			//red, pink, purple, deep-purple, indigo, blue, light-blue, cyan, teal, green, light-green, lime, yellow, amber, orange, deep-orange, brown, grey, blue-grey
             $mdThemingProvider
                 .theme('default')
-                .primaryPalette('grey', {
+                .primaryPalette('blue-grey', {
                     'default': '700'
                 });
 
@@ -45,7 +45,7 @@ angular
                 return '/';
             });
 
-            $stateProvider.state({
+			$stateProvider.state({
                 name: 'common',
                 abstract: true,
                 templateUrl: 'views/common.html',
@@ -54,54 +54,14 @@ angular
 
             $stateProvider.state({
                 name: 'common.home',
-                url: '/',
+                url: '',
                 templateUrl: 'views/home.html',
                 controller: 'HomeCtrl'
             });
-
-            $stateProvider.state({
-                name: 'common.toggle1',
-                url: '/toogle1',
-                abstract: true,
-                template: '<ui-view/>'
-            });
-
-            $stateProvider.state({
-                name: 'common.toggle1.item1',
-                url: '/item1',
-                templateUrl: 'views/default.html',
-                controller: function ($scope) {
-                    $scope.model = {
-                        title: 'Hello Toogle 1 Item 1'
-                    };
-                }
-            });
-
-            $stateProvider.state({
-                name: 'common.toggle1.item2',
-                url: '/item2',
-                templateUrl: 'views/default.html',
-                controller: function ($scope) {
-                    $scope.model = {
-                        title: 'Hello Toogle 1 Item 2'
-                    };
-                }
-            });
-
-            $stateProvider.state({
-                name: 'common.toggle1.item3',
-                url: '/item3',
-                templateUrl: 'views/default.html',
-                controller: function ($scope) {
-                    $scope.model = {
-                        title: 'Hello Toogle 1 Item 3'
-                    };
-                }
-            });
-
-            $stateProvider.state({
+			
+			$stateProvider.state({
                 name: 'common.link1',
-                url: '/link1',
+                url: '/aboutme',
                 templateUrl: 'views/default.html',
                 controller: function ($scope) {
                     $scope.model = {
@@ -109,10 +69,9 @@ angular
                     };
                 }
             });
-
-            $stateProvider.state({
+			$stateProvider.state({
                 name: 'common.link2',
-                url: '/link2',
+                url: '/work',
                 templateUrl: 'views/default.html',
                 controller: function ($scope) {
                     $scope.model = {
@@ -120,129 +79,87 @@ angular
                     };
                 }
             });
-
-            $stateProvider.state({
-                name: 'common.link2.edit',
-                url: '/edit',
+			$stateProvider.state({
+                name: 'common.p1',
+                url: '/work1',
                 templateUrl: 'views/default.html',
                 controller: function ($scope) {
                     $scope.model = {
-                        title: 'Hello Link 2'
+                        title: 'Project 1'
                     };
                 }
             });
-
-            $stateProvider.state({
-                name: 'common.link3',
-                url: '/link3',
+			$stateProvider.state({
+                name: 'common.p2',
+                url: '/work2',
                 templateUrl: 'views/default.html',
                 controller: function ($scope) {
                     $scope.model = {
-                        title: 'Hello Link 3'
+                        title: 'Project 2'
                     };
                 }
             });
-
-            $stateProvider.state({
-                name: 'common.toggle2',
-                url: '/toogle2',
-                abstract: true,
-                template: '<ui-view/>'
-            });
-
-            $stateProvider.state({
-                name: 'common.toggle2.item1',
-                url: '/item1',
+			$stateProvider.state({
+                name: 'common.p3',
+                url: '/work3',
                 templateUrl: 'views/default.html',
                 controller: function ($scope) {
                     $scope.model = {
-                        title: 'Hello Toogle 2 Item 1'
+                        title: 'Project 2'
                     };
                 }
             });
-
-            $stateProvider.state({
-                name: 'common.toggle3',
-                url: '/toogle3',
-                abstract: true,
-                template: '<ui-view/>'
-            });
-
-            $stateProvider.state({
-                name: 'common.toggle3.item1',
-                url: '/item1',
-                templateUrl: 'views/default.html',
-                controller: function ($scope) {
-                    $scope.model = {
-                        title: 'Hello Toogle 3 Item 1'
-                    };
-                }
-            });
-
-            $stateProvider.state({
-                name: 'common.toggle3.item2',
-                url: '/item2',
-                templateUrl: 'views/default.html',
-                controller: function ($scope) {
-                    $scope.model = {
-                        title: 'Hello Toogle 3 Item 2'
-                    };
-                }
-            });
-
+			
             ssSideNavSectionsProvider.initWithTheme($mdThemingProvider);
-            ssSideNavSectionsProvider.initWithSections([{
-                id: 'toogle_1',
-                name: 'Section Heading 1',
-                type: 'heading',
-                children: [{
-                    name: 'Toogle 1',
-                    type: 'toggle',
-                    pages: [{
-                        id: 'toogle_1_link_1',
-                        name: 'item 1',
-                        state: 'common.toggle1.item1'
-                    }, {
-                        id: 'toogle_1_link_2',
-                        name: 'item 2',
-                        state: 'common.toggle1.item2',
-                        hidden: true
-                    }, {
-                        id: 'toogle_1_link_3',
-                        name: 'item 3',
-                        state: 'common.toggle1.item3'
-                    }]
-                }]
-            }, {
+            ssSideNavSectionsProvider.initWithSections([
+			{
                 id: 'link_1',
-                name: 'Link 1 ',
+                name: 'About Me',
                 state: 'common.link1',
                 type: 'link',
-                icon: 'fa fa-check'
-            }, {
+                icon: 'fa fa-home'
+            },{
                 id: 'link_2',
-                name: 'Link 2',
+                name: 'Work Profile',
                 state: 'common.link2',
-                type: 'link'
-            }, {
-                id: 'link_3',
-                name: 'Link 3',
-                state: 'common.link3',
                 type: 'link',
-                hidden: true
-            },  {
-                id: 'toogle_2',
-                name: 'Section Heading 2',
-                type: 'heading',
+                icon: 'fa fa-briefcase'
+            },{
+                id: 'toogle_1',
+                name: '',
                 children: [{
-                    name: 'Toogle 2',
+                    name: 'Projects',
                     type: 'toggle',
+					icon: 'fa fa-chevron-circle-down',
                     pages: [{
-                        id: 'toogle_2_link_1',
-                        name: 'item 1',
-                        state: 'common.toggle2.item1'
+                        id: 'toogle_1_link_1',
+                        name: 'Web',
+                        state: 'common.p1',
+						icon: 'fa fa-chrome'
+                    }, {
+                        id: 'toogle_1_link_2',
+                        name: 'Mobile',
+                        state: 'common.p2',
+						icon: 'fa fa-mobile-phone'
+                    }, {
+                        id: 'toogle_1_link_3',
+                        name: 'Desktop',
+                        state: 'common.p3',
+						icon: 'fa fa-desktop'
                     }]
                 }]
+            },{
+                id: 'link_3',
+                name: 'Core Skills',
+                state: 'common.link3',
+                type: 'link',
+                icon: 'fa fa-code'
+            },{
+                id: 'link_4',
+                name: 'Contact',
+                state: 'common.link4',
+                type: 'link',
+                icon: 'fa fa-location-arrow'
             }]);
         }
     ]);

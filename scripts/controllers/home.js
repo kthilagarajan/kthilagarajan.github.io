@@ -11,15 +11,20 @@ angular.module('demoApp')
 
     .controller('HomeCtrl', [
         '$scope',
-        '$timeout',
+		'$mdSidenav',
+        '$timeout',		
         '$state',
         'ssSideNav',
         function (
             $scope,
+			$mdSidenav,
             $timeout,
             $state,
             ssSideNav) {
 
-
+			$scope.toggleNav = function(){
+				$mdSidenav('left').toggle();
+			}
+			
 	   }
     ]);
