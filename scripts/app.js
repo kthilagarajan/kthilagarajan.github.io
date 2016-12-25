@@ -37,7 +37,7 @@ angular
 			//red, pink, purple, deep-purple, indigo, blue, light-blue, cyan, teal, green, light-green, lime, yellow, amber, orange, deep-orange, brown, grey, blue-grey
             $mdThemingProvider
                 .theme('default')
-                .primaryPalette('blue-grey', {
+                .primaryPalette('light-blue', {
                     'default': '700'
                 });
 
@@ -62,12 +62,8 @@ angular
 			$stateProvider.state({
                 name: 'common.link1',
                 url: '/aboutme',
-                templateUrl: 'views/default.html',
-                controller: function ($scope) {
-                    $scope.model = {
-                        title: 'Hello Link 1'
-                    };
-                }
+                templateUrl: 'views/aboutme.html',
+                controller: 'AbtCtrl'
             });
 			$stateProvider.state({
                 name: 'common.link2',
@@ -75,7 +71,7 @@ angular
                 templateUrl: 'views/default.html',
                 controller: function ($scope) {
                     $scope.model = {
-                        title: 'Hello Link 2'
+                        title: 'Work Profile'
                     };
                 }
             });

@@ -35,9 +35,19 @@ angular.module('demoApp')
 			$scope.imgSrc = "/resources/images/wall.jpg"
             // Listen event SS_SIDENAV_CLICK_ITEM to close menu
             $rootScope.$on('SS_SIDENAV_CLICK_ITEM', function($scope) {
-                console.log($scope);
+                //console.log($scope);
             });
 
-            // _perform_change_for_demo();
         }
-    ]);
+    ])
+	.directive('typed', ["$timeout", function ($timeout) {
+		return {
+			restrict: 'A',
+			link: function (scope, element, attr) {
+				$(element).typed({
+					strings: [$(element).html()],
+					typeSpeed: 150
+				});
+			}
+		}
+	}]);

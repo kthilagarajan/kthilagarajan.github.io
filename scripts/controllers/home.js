@@ -27,4 +27,27 @@ angular.module('demoApp')
 			}
 			
 	   }
+    ])
+	.controller('AbtCtrl', [
+        '$scope',
+		'$mdSidenav',
+        '$timeout',		
+        '$state',
+        'ssSideNav',
+        function (
+            $scope,
+			$mdSidenav,
+            $timeout,
+            $state,
+            ssSideNav) {
+			console.log($scope)
+			$scope.toggleNav = function(){
+				$mdSidenav('left').toggle();
+			}
+			
+			$scope.model = {
+				title: 'About Mez'
+			};
+			
+	   }
     ]);
