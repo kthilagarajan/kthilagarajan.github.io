@@ -45,19 +45,20 @@ angular
                 return '/';
             });
 
-			$stateProvider.state({
-                name: 'common',
-                abstract: true,
-                templateUrl: 'views/common.html',
-                controller: 'CommonCtrl'
-            });
-
             $stateProvider.state({
-                name: 'common.home',
+                name: 'common', //layout
                 url: '',
+                templateUrl: 'views/layout.html',
+                controller: 'LayoutCtrl'
+            });
+			
+			$stateProvider.state({
+                name: 'common.home',
+                abstract: true,
                 templateUrl: 'views/home.html',
                 controller: 'HomeCtrl'
             });
+
 			
 			$stateProvider.state({
                 name: 'common.link1',

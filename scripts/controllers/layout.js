@@ -8,7 +8,7 @@
  * Controller of the demoApp
  */
 angular.module('demoApp')
-    .controller('CommonCtrl', [
+    .controller('LayoutCtrl', [
         '$scope',
         '$mdSidenav',
         '$timeout',
@@ -32,6 +32,7 @@ angular.module('demoApp')
 
             $scope.menu = ssSideNav;
 			
+			
 			$scope.imgSrc = "/resources/images/wall.jpg"
             // Listen event SS_SIDENAV_CLICK_ITEM to close menu
             $rootScope.$on('SS_SIDENAV_CLICK_ITEM', function($scope) {
@@ -45,7 +46,7 @@ angular.module('demoApp')
 			restrict: 'A',
 			link: function (scope, element, attr) {
 				$(element).typed({
-					strings: [$(element).html()],
+					strings: ["<span><span style='font-size: 10vw; color: rebeccapurple;' >	Hello! <br/> I'm Thilak, <br/></span><span style='font-size: 6vw;color: rgb(216,67,21);' > a Product Developer</span></span>"],
 					typeSpeed: 150
 				});
 			}
