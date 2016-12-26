@@ -15,25 +15,20 @@
 
 
 <div layout="column" flex role="main" class="baseLayout">
-<md-toolbar  style="background:white;">
-    <div class="md-toolbar-tools">
+
         <md-button class="md-icon-button"
             aria-label="Menu Button"
-            ng-click="toggleNav();" >
+            ng-click="toggleNav();" style="position: absolute;top:10px;left:10px;" >
             <md-icon class="slideIcon"
                 md-svg-icon="resources/images/icons/menu.svg"
                 aria-label="Menu Icon">
             </md-icon>
         </md-button>
 
-        <h2></h2>
-
-        <span flex></span>
-		
-    </div>
-</md-toolbar>
-    <div ui-view layout="column" >
-		<div typed style="margin-left: 10vw;"></div>
+        
+    
+    <div ui-view layout="column" style="overflow: auto;" >
+		<div typed style="margin-left: 15vw;margin-top: 5vw;"></div>
 	</div>	
 </div>
 

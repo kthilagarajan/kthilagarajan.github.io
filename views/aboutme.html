@@ -1,3 +1,16 @@
-
-
-   About me content
+<div class="container">
+  <ul class="timeline">
+    <li ng-repeat="dataObj in durationData" ng-class="dataObj.class">
+		<div class="timeline-badge {{dataObj.color}}"><i class="fa {{dataObj.icon}}"></i></div>
+		<div class="timeline-panel">
+        <div class="timeline-heading">
+          <h4 class="timeline-title">{{dataObj.info}}</h4>
+		  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> {{dataObj.date}}</small></p>
+        </div>
+        <div class="timeline-body">
+          <p>{{dataObj.location}}</p>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
