@@ -69,7 +69,7 @@ angular
 			$stateProvider.state({
                 name: 'common.link2',
                 url: '/work',
-                templateUrl: 'views/default.html',
+                templateUrl: 'views/work.html',
                 controller: function ($scope) {
                     $scope.model = {
                         title: 'Work Profile'
