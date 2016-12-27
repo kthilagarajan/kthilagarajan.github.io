@@ -33,7 +33,11 @@ angular.module('demoApp')
             $scope.menu = ssSideNav;
 			
 			
-			$scope.imgSrc = "/resources/images/wall.jpg"
+					
+			
+			$scope.reloadRoute = function() {
+				window.location.reload()
+			};
             // Listen event SS_SIDENAV_CLICK_ITEM to close menu
             $rootScope.$on('SS_SIDENAV_CLICK_ITEM', function($scope) {
                 //console.log($scope);

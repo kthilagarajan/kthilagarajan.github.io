@@ -52,29 +52,12 @@ angular
                 controller: 'LayoutCtrl'
             });
 			
-			$stateProvider.state({
-                name: 'common.home',
-                abstract: true,
-                templateUrl: 'views/home.html',
-                controller: 'HomeCtrl'
-            });
-
 			
 			$stateProvider.state({
-                name: 'common.link1',
+                name: 'common.about',
                 url: '/aboutme',
                 templateUrl: 'views/aboutme.html',
                 controller: 'AbtCtrl'
-            });
-			$stateProvider.state({
-                name: 'common.link2',
-                url: '/work',
-                templateUrl: 'views/work.html',
-                controller: function ($scope) {
-                    $scope.model = {
-                        title: 'Work Profile'
-                    };
-                }
             });
 			$stateProvider.state({
                 name: 'common.p1',
@@ -112,15 +95,9 @@ angular
 			{
                 id: 'link_1',
                 name: 'About Me',
-                state: 'common.link1',
+                state: 'common.about',
                 type: 'link',
                 icon: 'fa fa-home'
-            },{
-                id: 'link_2',
-                name: 'Work Profile',
-                state: 'common.link2',
-                type: 'link',
-                icon: 'fa fa-briefcase'
             },{
                 id: 'toogle_1',
                 name: '',

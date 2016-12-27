@@ -2,7 +2,7 @@
     md-component-id="left" >
 
     <header class="nav-header" ss-style-color="{'background-color': 'primary.default'}">
-        <a ng-href="/index.html" class="logo">
+        <a ng-href="#" ng-click="reloadRoute()" class="logo">
             <h1 class="md-heading">Thilagarajan Kamarajan</h1>
         </a>
     </header>
@@ -23,11 +23,12 @@
                 md-svg-icon="resources/images/icons/menu.svg"
                 aria-label="Menu Icon">
             </md-icon>
+			
         </md-button>
-
+		<h3 style="position: absolute;left: 60px;top: -3px;"></h3>
         
     
-    <div ui-view layout="column" style="overflow: auto;" >
+    <div ui-view layout="column" style="overflow: auto;background:url(/resources/images/wall1.jpg) no-repeat;background-size: 100% 100%;height: 50vw;" >
 		<div typed style="margin-left: 15vw;margin-top: 5vw;"></div>
 	</div>	
 </div>

@@ -50,6 +50,9 @@
   position: relative;
   -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+  background : rgba(0, 0, 0, 0.5);
+  color: white;
+  font-weight: bolder;
 }
 
 .timeline > li > .timeline-panel:before {
@@ -144,4 +147,7 @@
 
 .timeline-body > p + p {
   margin-top: 5px;
+}
+.timeline-heading p small.text-muted{
+	color: #e8dede !important;
 }
