@@ -87,13 +87,6 @@
       <div id="pulsing-circle"><img src="http://preloaders.net/preloaders/714/Pulse.gif" id="loading-fallback" ></div>
     </div>
   </div>
-  <script>
-      $(window).load(function() {
-    $("#loading-spinner").fadeOut();
-    $('#loading-screen').delay(350).fadeOut('slow');
-    $('body').delay(350).css({'overflow':'visible'});
-  });
-  </script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-animate/angular-animate.js"></script>
     <script src="bower_components/angular-aria/angular-aria.js"></script>
@@ -114,5 +107,13 @@
     <script src="scripts/controllers/layout.js"></script>
     <script src="scripts/controllers/about.js"></script>
     <script src="scripts/controllers/projects.js"></script>
+	  
+  <script>
+      $(window).load(function() {
+    $("#loading-spinner").fadeOut();
+    $('#loading-screen').delay(350).fadeOut('slow');
+    $('body').delay(350).css({'overflow':'visible'});
+  });
+  </script>
 </body>
 </html>
