@@ -6,6 +6,71 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
 	<link rel="icon" href="favicon.ico" type="image/x-icon" />
+	  <style>
+      body { height: 100%; overflow: hidden; }
+
+.no-js #loading-screen,
+.no-js #pulsing-circle-container,
+.no-js #pulsing-circle { display: none;  }
+
+#loading-fallback { display: none; }
+
+.no-cssanimations #pulsing-circle { background-color: none; }
+.no-cssanimations #loading-fallback { display: block; }
+
+#loading-screen {
+  background: #fff;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 999;
+}
+
+#pulsing-circle-container {
+  display: block;
+  position: absolute;
+  margin: 0 auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100px;
+  height: 100px;
+}
+
+#pulsing-circle {
+  width: 100%;
+  height: 100%;
+  margin: 100px auto;
+  background-color: #333;
+  border-radius: 100%;
+  -webkit-animation: scaleout 1.0s infinite ease-in-out;
+  animation: scaleout 1.0s infinite ease-in-out;
+}
+
+@-webkit-keyframes scaleout {
+  0% { -webkit-transform: scale(0.0) }
+  100% {
+    -webkit-transform: scale(1.0);
+    opacity: 0;
+  }
+}
+
+@keyframes scaleout {
+  0% {
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 100% {
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+    opacity: 0;
+  }
+}
+    </style>
     <link rel="stylesheet" href="bower_components/angular-material/angular-material.css" />
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
 
@@ -17,7 +82,18 @@
   </head>
   <body ng-app="demoApp">
     <div ui-view layout="row" flex></div>
-
+<div id="loading-screen">
+    <div id="pulsing-circle-container">
+      <div id="pulsing-circle"><img src="http://preloaders.net/preloaders/714/Pulse.gif" id="loading-fallback" ></div>
+    </div>
+  </div>
+  <script>
+      $(window).load(function() {
+    $("#loading-spinner").fadeOut();
+    $('#loading-screen').delay(350).fadeOut('slow');
+    $('body').delay(350).css({'overflow':'visible'});
+  });
+  </script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-animate/angular-animate.js"></script>
     <script src="bower_components/angular-aria/angular-aria.js"></script>
