@@ -1,0 +1,53 @@
+body,
+html {
+    /* background: linear-gradient(145deg, #f0f1f6 10%, #4887ff 70%) no-repeat; */
+    background: linear-gradient(129deg, #0D47A1 50%, #e1f5fe 30%) no-repeat;
+    /* background-size: cover; */
+    height: 100vh;
+    overflow: auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.margin-5 {
+    margin: 5px;
+}
+
+.t-box {
+    background: #fff;
+    margin: 5px 0px 0px 5px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.t-box .t-content {
+    border: 1px dashed #aaa;
+    padding: 10px;
+    height: 120px;
+}
+
+.padding-10 {
+    padding: 10px;
+}
+
+@media only screen and (min-width: 1200px) {
+    .padding-0 {
+        /* padding: 0px; */
+    }
+}
+
+.uk-panel {
+    cursor: all-scroll;
+}
+
+.uk-sortable-placeholder {
+    opacity: 0.5;
+}
+
+.uk-sortable-drag {
+    background: #fff;
+    padding: 0px !important;
+    box-shadow: 0px 0px 2px 2px #000;
+}
