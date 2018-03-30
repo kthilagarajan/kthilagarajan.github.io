@@ -90,3 +90,7 @@ html {
 a:hover {
     text-decoration: none;
 }
+
+a {
+    color: #2648a0;
+}
