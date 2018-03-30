@@ -58,6 +58,12 @@ html {
     right: 10px;
 }
 
+.resume-position {
+    position: absolute;
+    right: 10px;
+    bottom: 5px;
+}
+
 .padding-none {
     padding: 0px;
 }
@@ -93,4 +99,5 @@ a:hover {
 
 a {
     color: #2648a0;
+    font-size: 14px;
 }
