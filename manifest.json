@@ -1,7 +1,7 @@
 {
     "name": "Thilagarajan Kamarajan - About Me",
     "short_name": "Thilak",
-    "display": "Thilak - About Me",
+    "display": "standalone",
     "start_url": "/",
     "theme_color": "#0D47A1",
     "background_color": "#e1f5fe",
