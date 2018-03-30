@@ -86,3 +86,7 @@ html {
 .f-11 {
     font-size: 11px;
 }
+
+a:hover {
+    text-decoration: none;
+}
